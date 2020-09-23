@@ -9,5 +9,8 @@
         <module name="hessian" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hessian" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

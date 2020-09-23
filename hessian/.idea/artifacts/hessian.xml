@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hessian">
+    <output-path>$PROJECT_DIR$/classes/artifacts/hessian</output-path>
+    <root id="archive" name="hessian.war" />
+  </artifact>
+</component>
