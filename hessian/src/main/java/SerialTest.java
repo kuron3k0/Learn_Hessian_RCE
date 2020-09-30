@@ -39,31 +39,7 @@ public class SerialTest {
     }
 
     public static void main(String[] args) throws IOException {
-        int id = 111;
-        String name = "hessian";
-        String gender = "boy";
-
-        Map innerMap = new HashMap<String, Class<Object>>();
-        innerMap.put("1", ObjectInputStream.class);
-        innerMap.put("2", SQLData.class);
-
-        Student friend = new Student(222, "hessian1", "boy");
-        List friends = new ArrayList<Student>();
-        friends.add(friend);
-
-        Student stu = new Student();
-        stu.setId(id);
-        stu.setName(name);
-        stu.setGender(gender);
-        stu.setInnerMap(innerMap);
-        stu.setFriends(friends);
-
-        System.out.println("---------------hessian serialize----------------");
-        byte[] obj = serialize(stu);
-        System.out.println(new String(obj));
-        System.out.println("---------------hessian deserialize--------------");
-
-
+        //System.setProperty("com.sun.jndi.ldap.object.trustURLCodebase", "true");
 
         DataInputStream is = new DataInputStream(
                 new BufferedInputStream(new FileInputStream(
@@ -73,7 +49,7 @@ public class SerialTest {
         is.close();
         System.out.println(new String(b));
         System.out.println("---------------hessian deserialize--------------");
-        Student student = deserialize(b);
-        System.out.println(student);
+        deserialize(b);
+
     }
 }
